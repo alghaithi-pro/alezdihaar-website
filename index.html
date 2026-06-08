@@ -105,6 +105,8 @@
       background: url('imgs/hero.jpg') center/cover no-repeat;
     }
 
+    .hero-mobile-img { display: none; }
+
     .hero-overlay {
       position: absolute;
       inset: 0;
@@ -585,9 +587,10 @@
       header { padding: 0 20px; height: 64px; }
       nav { display: none; }
       .hamburger { display: flex; }
-      .hero-overlay { background: rgba(0,0,0,0.78) !important; }
-      .hero-content { text-align: center; }
-      .btn-hero { margin: 0 auto; }
+      #hero { min-height: 0; background: none; }
+      .hero-overlay { display: none; }
+      .hero-content { display: none; }
+      .hero-mobile-img { display: block; width: 100%; }
 
       .hero-content { padding: 100px 24px 60px; max-width: 100%; }
       .hero-content h1 { font-size: 38px; }
@@ -665,6 +668,7 @@
 
 <!-- ════════════════ HERO ════════════════ -->
 <section id="hero">
+  <img src="imgs/hero.jpg" class="hero-mobile-img" alt="الازدهار العربي للمقاولات">
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <h1>الازدهار العربي<span>للمقاولات</span></h1>
