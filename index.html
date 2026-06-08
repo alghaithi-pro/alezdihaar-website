@@ -252,6 +252,62 @@
     #about { line-height: 0; }
     #about img { width: 100%; display: block; }
 
+    /* ── PROJECTS ── */
+    #projects {
+      padding: 90px 60px;
+      background: #fff;
+    }
+
+    .proj-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .pcard {
+      border-radius: 16px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 6px 30px rgba(0,0,0,0.12);
+      transition: transform .3s, box-shadow .3s;
+      cursor: pointer;
+    }
+
+    .pcard:hover { transform: translateY(-6px); box-shadow: 0 16px 50px rgba(0,0,0,0.2); }
+
+    .pcard img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      display: block;
+      transition: transform .4s;
+    }
+
+    .pcard:hover img { transform: scale(1.04); }
+
+    .pcard-label {
+      position: absolute;
+      bottom: 0; inset-inline: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 100%);
+      padding: 40px 24px 20px;
+      color: #fff;
+      font-size: 20px;
+      font-weight: 800;
+    }
+
+    .pcard-label span {
+      display: inline-block;
+      background: var(--gold);
+      color: #0D0D0D;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 20px;
+      margin-bottom: 8px;
+    }
+
     /* ── EQUIPMENT ── */
     #equipment {
       padding: 90px 60px;
@@ -505,7 +561,7 @@
     <a href="#hero">الرئيسية</a>
     <a href="#about">عن الشركة</a>
     <a href="#services">خدماتنا</a>
-    <a href="#">مشاريعنا</a>
+    <a href="#projects">مشاريعنا</a>
     <a href="#equipment">المعدات</a>
     <a href="#">الوظائف</a>
     <a href="#footer">تواصل معنا</a>
@@ -594,6 +650,32 @@
 <!-- ════════════════ ABOUT ════════════════ -->
 <section id="about">
   <img src="imgs/about.jpg" alt="عن الشركة — الازدهار العربي للمقاولات">
+</section>
+
+<!-- ════════════════ PROJECTS ════════════════ -->
+<section id="projects">
+  <p class="sec-label">أعمالنا</p>
+  <h2 class="sec-title">مشاريعنا</h2>
+
+  <div class="proj-grid">
+
+    <div class="pcard">
+      <img src="imgs/proj_neom.jpg" alt="مشروع نيوم">
+      <div class="pcard-label">
+        <span>مشروع منفذ</span><br>
+        مشروع نيوم
+      </div>
+    </div>
+
+    <div class="pcard">
+      <img src="imgs/proj_mustaqbal.jpg" alt="مشروع مدينة المستقبل">
+      <div class="pcard-label">
+        <span>مشروع منفذ</span><br>
+        مدينة المستقبل
+      </div>
+    </div>
+
+  </div>
 </section>
 
 <!-- ════════════════ EQUIPMENT ════════════════ -->
